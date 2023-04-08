@@ -1,13 +1,239 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* navbar */
+nav {
+  color: black;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+nav img {
+  margin-right: auto;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:active {
+  border-bottom: 1px solid #75ad2a;
+}
+
+/* main */
+/* main {
+  margin-top: 50px;
+} */
+
+/* banner */
+.bg-banner {
+  opacity: 0.4;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.banner-text {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  margin-top: 250px;
+}
+.banner-text h1 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.banner-text p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.banner-text > a {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  background-color: #75ad2a;
+  padding: 10px 15px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Stories */
+.sub-banner {
+  background-img: url("https://unsplash.com/photos/nMyM7fxpokE");
+  background: rgba(117, 173, 42, 0.9);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+.stories-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stories-content h2 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.stories-content p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #8b8c89;
+}
+.stories-content p:first-child {
+  color: green;
+  margin-top: 20px;
+}
+.stories-content p:last-child {
+  margin-bottom: 20px;
+}
+.stories-next a {
+  text-decoration: none;
+  background-color: rgba(117, 173, 42, 0.9);
+  padding: 0.5em 0.5em 0.5em;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+/* SERVICES */
+
+.services-content {
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.services-item {
+  background-color: #fafafa;
+  padding: 30px;
+  gap: 20px;
+}
+.services-item:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.services-item h3 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.services-text {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services-text p {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.services-text h1 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* footer */
+
+footer {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(117, 173, 42, 1);
+}
+
+/* doctor list */
+.doctor-list button {
+  background: rgba(117, 173, 42, 1);
+  border: 1px solid rgba(117, 173, 42, 1);
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.doctor-list img {
+  width: 250px;
+}
+.doctor-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+/* doctor details */
+.doctor-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.doctor-details > img {
+  max-width: 30%;
+}
+
+.doctor-details p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* NotFound */
+.error {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.error p {
+  margin-bottom: 20px;
+}
+.error a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: rgba(117, 173, 42, 1);
+  box-sizing: border-box;
+  border-radius: 4px;
 }
